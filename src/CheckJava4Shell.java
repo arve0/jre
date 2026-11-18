@@ -9,7 +9,7 @@
  * For å få filen over på en kjørende tjeneste:
  * 1. Start en en debug container -- se README.md
  * 2. Opprett filen: echo '<paste innhold av CheckJava4Shell.java>' > /proc/1/root/tmp/CheckJava4Shell.java
- * 3. Kjør via exec på poden: kubectl exec $pod --tty --stdin -- java --source 25 /tmp/CheckJava4Shell.java
+ * 3. Kjør via exec på poden: kubectl exec $pod --tty --stdin -- java -Xbatch --source 25 /tmp/CheckJava4Shell.java
  */
 void main() throws java.io.IOException {
     System.out.println("Sjekker Java4Shell-sårbarhet...");
